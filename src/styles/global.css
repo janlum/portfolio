@@ -52,9 +52,13 @@ section {
  font-family: "Space Mono", monospace;
  /* font-size: 2.5rem; */
  font-size: var(--fs-TitlePage);
+ 
 }
 
 /* Scroll Arrow for title page */
+#scroll_arrow::before {
+  content: "";
+}
 
 #scroll_arrow a {
   padding-top: 70px;
@@ -73,6 +77,23 @@ section {
   -webkit-animation: sdb05 1.5s infinite;
   animation: sdb05 1.5s infinite;
   box-sizing: border-box;
+}
+#scroll_arrow a:hover {
+  opacity: .5;
+}
+.demo a {
+  position: absolute;
+  /* bottom: 20px; */
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  /* transform: translate(0, -50%); */
+  color: #fff;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
 }
 
 @-webkit-keyframes sdb05 {
@@ -174,3 +195,9 @@ section {
 
 }
 
+/* Hiding scroll arrow on title page on mobile devices */
+@media screen and (max-width: 767px) {
+  #scroll_arrow {
+    display: none;
+  }
+}

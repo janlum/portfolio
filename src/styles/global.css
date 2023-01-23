@@ -55,11 +55,12 @@ section {
  
 }
 
-/* Scroll Arrow for title page */
-#scroll_arrow::before {
-  content: "";
+#title_text {
+  position: relative;
+  top: -20px;
 }
 
+/* Scroll Arrow for title page */
 #scroll_arrow a {
   padding-top: 70px;
 }

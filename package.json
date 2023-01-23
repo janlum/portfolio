@@ -15,5 +15,8 @@
     "@astrojs/rss": "^2.0.0",
     "astro": "^1.9.0",
     "preact": "^10.11.3"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.16"
   }
 }

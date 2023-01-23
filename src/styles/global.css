@@ -4,6 +4,7 @@ html {
     /* background-color: #8080ff; */
     font-family: sans-serif;
     overflow-y: scroll;    /* Gives ability to scroll */
+    scroll-behavior: smooth;
     /* -ms-overflow-style: none;  Hides scrollbar for IE and Edge */
     /* scrollbar-width: none;  Hides scrollbar for Firefox */
   }
@@ -54,9 +55,6 @@ section {
 }
 
 /* Scroll Arrow for title page */
-#scroll_arrow { 
-  background: url(https://www.nxworld.net/example/css-scroll-down-button/bg05.jpg) center center / cover no-repeat;
-}
 
 #scroll_arrow a {
   padding-top: 70px;

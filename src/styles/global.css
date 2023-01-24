@@ -80,7 +80,7 @@ section {
   background-repeat:no-repeat;
   animation: 
     b .7s infinite steps(1),   
-    t calc(var(--n)*0.01s) steps(var(--n)) forwards; /*0.04*/
+    t calc(var(--n)*0.04s) steps(var(--n)) forwards; /*0.04*/
 }
 @keyframes t{
   from {background-size:0 200%}

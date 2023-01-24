@@ -47,17 +47,46 @@ section {
 }
 
 /* Cover Page */
-#CoverPage h1{
+.typewriter{
+/* #CoverPage h1 { */
  color: rgba(255, 255, 255, 0.75);
  font-family: "Space Mono", monospace;
+ font-weight: bold;
  /* font-size: 2.5rem; */
  font-size: var(--fs-TitlePage);
- 
 }
 
 #title_text {
   position: relative;
   top: -20px;
+}
+
+/* Span used as alternative for breakpoint */
+.br {
+  display: block;
+  margin-bottom: 0.45em;
+}
+
+/* Typewriter animation for title page */
+.typewriter {
+  /* font-family: monospace; */
+  color:#0000;
+  background:
+    linear-gradient(-90deg,rgba(255, 255, 255, 0.75) 5px,#0000 0) 10px 0,
+    linear-gradient(rgba(255, 255, 255, 0.75) 0 0) 0 0;
+  background-size:calc(var(--n)*1ch) 200%;
+  -webkit-background-clip:padding-box,text;
+  background-clip:padding-box,text;
+  background-repeat:no-repeat;
+  animation: 
+    b .7s infinite steps(1),   
+    t calc(var(--n)*0.01s) steps(var(--n)) forwards; /*0.04*/
+}
+@keyframes t{
+  from {background-size:0 200%}
+}
+@keyframes b{
+  50% {background-position:0 -100%,0 0}
 }
 
 /* Scroll Arrow for title page */
@@ -82,14 +111,14 @@ section {
 #scroll_arrow a:hover {
   opacity: .5;
 }
-.demo a {
+#scroll_arrow a {
   position: absolute;
   /* bottom: 20px; */
   left: 50%;
   z-index: 2;
   display: inline-block;
-  -webkit-transform: translate(0, -50%);
-  /* transform: translate(0, -50%); */
+  -webkit-transform: translate(0, -50%); 
+  transform: translate(0, -50%);
   color: #fff;
   font : normal 400 20px/1 'Josefin Sans', sans-serif;
   letter-spacing: .1em;
@@ -124,6 +153,8 @@ section {
   }
 }
 /* End of scroll arrow for title page */
+
+
 
 /* nav styles */
 .hamburger {
@@ -166,14 +197,14 @@ section {
   display: unset;
 }
 
-.dark body {
+/* .dark body {
   background-color: #0d0950;
   color: #fff;
 }
 
 .dark .nav-links a {
-  color: #fff;
-}
+  color: #000;
+} */
 
 
 @media screen and (min-width: 636px) {

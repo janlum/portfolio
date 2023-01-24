@@ -90,12 +90,25 @@ section {
 }
 
 /* Scroll Arrow for title page */
-#scroll_arrow a {
-  padding-top: 70px;
+#scroll_arrow {
+  animation: fadeIn 2s;
+  animation-delay: 10s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  
 }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 #scroll_arrow a span {
   position: absolute;
-  bottom: 70px;
+  /* bottom: 70px; */
   left: 50%;
   width: 24px;
   height: 24px;
@@ -114,6 +127,7 @@ section {
 #scroll_arrow a {
   position: absolute;
   /* bottom: 20px; */
+  padding-top: 70px;
   left: 50%;
   z-index: 2;
   display: inline-block;

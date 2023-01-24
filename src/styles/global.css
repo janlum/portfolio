@@ -1,7 +1,5 @@
 html {
-    /* background-color: #000000; */
     background-color: rgb(25, 25, 25);
-    /* background-color: #8080ff; */
     font-family: sans-serif;
     overflow-y: scroll;    /* Gives ability to scroll */
     scroll-behavior: smooth;
@@ -47,7 +45,11 @@ section {
 }
 
 /* Cover Page */
-.typewriter{
+#CoverPage {
+  height: 100vh;
+}
+
+.typewriter {
 /* #CoverPage h1 { */
  color: rgba(255, 255, 255, 0.75);
  font-family: "Space Mono", monospace;
@@ -69,7 +71,7 @@ section {
 
 /* Typewriter animation for title page */
 .typewriter {
-  /* font-family: monospace; */
+    /* font-family: monospace; */
   color:#0000;
   background:
     linear-gradient(-90deg,rgba(255, 255, 255, 0.75) 5px,#0000 0) 10px 0,
@@ -108,7 +110,6 @@ section {
 
 #scroll_arrow a span {
   position: absolute;
-  /* bottom: 70px; */
   left: 50%;
   width: 24px;
   height: 24px;

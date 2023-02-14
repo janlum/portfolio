@@ -19,7 +19,11 @@ body {
   --fs-TitlePage: clamp(1.2rem, 5vw + 0.2rem,2.5rem);
   --delay-2: 1s;
   --delay-3: 2.4s;
-  --delay-4: 6.72s;
+  --delay-4: 3.28s;
+  --delay-5: 4.16s;
+  --delay-6: 5.04s;
+  --delay-7: 6.64s;
+  --delay-8: 7.56s;  
 }
   
 * {
@@ -58,7 +62,7 @@ section {
 /* End of attempt at Hardcoding typewriter effect */
 
 
-.typewriter, .line_1, .line_2, .line_3, .line_4{
+.typewriter, .line_1, .line_2, .line_3, .line_4, .line_5, .line_6, .line_7, .line_8{
  color: rgba(255, 255, 255, 0.75);
  font-family: "Space Mono", monospace;
  font-weight: bold;
@@ -81,38 +85,45 @@ section {
     typing calc(var(--n)*0.04s) steps(var(--n)) forwards;  */
 }
 .line_1 {
-  -webkit-animation:  
-  blink .7s infinite steps(1),   
-  typing 0.24s steps(var(--n)) forwards;
-
 animation: 
-  blink .7s infinite steps(1),   
+  blink .7s steps(1) var(--n),   
   typing 0.24s steps(var(--n)) forwards; 
 }
 .line_2 {
-  -webkit-animation:  
-    blink .7s steps(1) var(--delay-2) infinite,   
-    typing 0.64s steps(var(--n)) var(--delay-2) forwards;
   animation: 
-    blink .7s steps(1) var(--delay-2) infinite,   
+    blink .7s steps(1) var(--delay-2) var(--n),   
     typing 0.64s steps(var(--n)) var(--delay-2) forwards; 
 }
 .line_3 {
-  /* -webkit-animation:  
-    blink .7s steps(1) var(--delay-3) infinite,   
-    typing 3.56s steps(var(--n)) var(--delay-3) forwards; */
 
   animation: 
-    blink .7s steps(1) var(--delay-3) infinite,   
-    typing 3.56s steps(var(--n)) var(--delay-3) forwards; 
+    blink .7s steps(1) var(--delay-3) var(--n),   
+    typing 0.88s steps(var(--n)) var(--delay-3) forwards; 
 }
 .line_4 {
-  /* -webkit-animation:  
-    blink .7s steps(1) var(--delay-4) infinite,   
-    typing 1.8s steps(var(--n)) var(--delay-4) forwards; */
   animation: 
-    blink .7s steps(1) var(--delay-4) infinite,   
-    typing 1.8s steps(var(--n)) var(--delay-4) forwards;  
+    blink .7s steps(1) var(--delay-4) var(--n),   
+    typing 0.88s steps(var(--n)) var(--delay-4) forwards;  
+}
+.line_5 {
+  animation: 
+    blink .7s steps(1) var(--delay-4) var(--n),   
+    typing 0.88s steps(var(--n)) var(--delay-5) forwards;  
+}
+.line_6 {
+  animation: 
+    blink .7s steps(1) var(--delay-4) var(--n),   
+    typing 0.84s steps(var(--n)) var(--delay-6) forwards;  
+}
+.line_7 {
+  animation: 
+    blink .7s steps(1) var(--delay-4) var(--n),   
+    typing 0.92s steps(var(--n)) var(--delay-7) forwards;  
+}
+.line_8 {
+  animation: 
+    blink .7s steps(1) var(--delay-4) var(--n),   
+    typing 0.8s steps(var(--n)) var(--delay-8) forwards;  
 }
 @-webkit-keyframes typing {
   /* from {-webkit-background-size:0 200%} */

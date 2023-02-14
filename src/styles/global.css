@@ -70,7 +70,6 @@ section {
   /* background-size:calc(var(--n)*1ch) 200%; */
   background-size: 0 200%;
   -webkit-background-clip:padding-box,text;
-  -moz-background-clip: padding-box, text;
   background-clip:padding-box,text;
   /* overflow: hidden; */
   background-repeat:no-repeat;
@@ -85,6 +84,7 @@ section {
   -webkit-animation:  
   blink .7s infinite steps(1),   
   typing 0.24s steps(var(--n)) forwards;
+
 animation: 
   blink .7s infinite steps(1),   
   typing 0.24s steps(var(--n)) forwards; 
@@ -98,17 +98,18 @@ animation:
     typing 0.64s steps(var(--n)) var(--delay-2) forwards; 
 }
 .line_3 {
-  -webkit-animation:  
+  /* -webkit-animation:  
     blink .7s steps(1) var(--delay-3) infinite,   
-    typing 3.56s steps(var(--n)) var(--delay-3) forwards;
+    typing 3.56s steps(var(--n)) var(--delay-3) forwards; */
+
   animation: 
     blink .7s steps(1) var(--delay-3) infinite,   
     typing 3.56s steps(var(--n)) var(--delay-3) forwards; 
 }
 .line_4 {
-  -webkit-animation:  
+  /* -webkit-animation:  
     blink .7s steps(1) var(--delay-4) infinite,   
-    typing 1.8s steps(var(--n)) var(--delay-4) forwards;
+    typing 1.8s steps(var(--n)) var(--delay-4) forwards; */
   animation: 
     blink .7s steps(1) var(--delay-4) infinite,   
     typing 1.8s steps(var(--n)) var(--delay-4) forwards;  

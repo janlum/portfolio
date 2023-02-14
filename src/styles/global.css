@@ -3,16 +3,9 @@ html {
     font-family: sans-serif;
     overflow-y: scroll;    /* Gives ability to scroll */
     scroll-behavior: smooth;
-    /* -ms-overflow-style: none;  Hides scrollbar for IE and Edge */
-    /* scrollbar-width: none;  Hides scrollbar for Firefox */
   }
 
-html::-webkit-scrollbar{
-    /* display: none;  Hides scrollbar for Chrome, Safari and Opera */
-  }
-
-
-  
+ 
 body {
   margin: 0 auto;
   width: 100%;
@@ -24,6 +17,9 @@ body {
  
 :root {
   --fs-TitlePage: clamp(1.2rem, 5vw + 0.2rem,2.5rem);
+  --delay-2: 1s;
+  --delay-3: 2.4s;
+  --delay-4: 6.72s;
 }
   
 * {
@@ -49,14 +45,90 @@ section {
   height: 100vh;
 }
 
-.typewriter {
-/* #CoverPage h1 { */
+/* Attempt at Hardcoding typewriter effect */
+#CoverPage h1 {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "Space Mono", monospace;
+  /* font-weight: bold; */
+  font-size: var(--fs-TitlePage); 
+  border-right: 2px solid;
+}
+
+
+/* End of attempt at Hardcoding typewriter effect */
+
+
+.typewriter, .line_1, .line_2, .line_3, .line_4{
  color: rgba(255, 255, 255, 0.75);
  font-family: "Space Mono", monospace;
  font-weight: bold;
- /* font-size: 2.5rem; */
  font-size: var(--fs-TitlePage);
+  color:#0000;
+  background:
+    linear-gradient(-90deg,rgba(255, 255, 255, 0.75) 5px,#0000 0) 10px 0,
+    linear-gradient(rgba(255, 255, 255, 0.75) 0 0) 0 0;
+  /* background-size:calc(var(--n)*1ch) 200%; */
+  background-size: 0 200%;
+  -webkit-background-clip:padding-box,text;
+  -moz-background-clip: padding-box, text;
+  background-clip:padding-box,text;
+  /* overflow: hidden; */
+  background-repeat:no-repeat;
+  /* -webkit-animation:  
+    blink .7s infinite steps(1),   
+    typing calc(var(--n)*0.04s) steps(var(--n)) forwards;
+  animation: 
+    blink .7s infinite steps(1),   
+    typing calc(var(--n)*0.04s) steps(var(--n)) forwards;  */
 }
+.line_1 {
+  -webkit-animation:  
+  blink .7s infinite steps(1),   
+  typing 0.24s steps(var(--n)) forwards;
+animation: 
+  blink .7s infinite steps(1),   
+  typing 0.24s steps(var(--n)) forwards; 
+}
+.line_2 {
+  -webkit-animation:  
+    blink .7s steps(1) var(--delay-2) infinite,   
+    typing 0.64s steps(var(--n)) var(--delay-2) forwards;
+  animation: 
+    blink .7s steps(1) var(--delay-2) infinite,   
+    typing 0.64s steps(var(--n)) var(--delay-2) forwards; 
+}
+.line_3 {
+  -webkit-animation:  
+    blink .7s steps(1) var(--delay-3) infinite,   
+    typing 3.56s steps(var(--n)) var(--delay-3) forwards;
+  animation: 
+    blink .7s steps(1) var(--delay-3) infinite,   
+    typing 3.56s steps(var(--n)) var(--delay-3) forwards; 
+}
+.line_4 {
+  -webkit-animation:  
+    blink .7s steps(1) var(--delay-4) infinite,   
+    typing 1.8s steps(var(--n)) var(--delay-4) forwards;
+  animation: 
+    blink .7s steps(1) var(--delay-4) infinite,   
+    typing 1.8s steps(var(--n)) var(--delay-4) forwards;  
+}
+@-webkit-keyframes typing {
+  /* from {-webkit-background-size:0 200%} */
+  to {-webkit-background-size: calc(var(--n)*1ch) 200%}
+}
+@-webkit-keyframes blink{
+  50% {-webkit-background-position:0 -100%,0 0}
+}
+@keyframes typing{
+  /* from {background-size:0 200%} */
+  to {background-size: calc(var(--n)*1ch) 200%}
+}
+@keyframes blink{
+  50% {background-position:0 -100%,0 0}
+}
+
+
 
 #title_text {
   position: relative;
@@ -69,32 +141,11 @@ section {
   margin-bottom: 0.45em;
 }
 
-/* Typewriter animation for title page */
-.typewriter {
-    /* font-family: monospace; */
-  color:#0000;
-  background:
-    linear-gradient(-90deg,rgba(255, 255, 255, 0.75) 5px,#0000 0) 10px 0,
-    linear-gradient(rgba(255, 255, 255, 0.75) 0 0) 0 0;
-  background-size:calc(var(--n)*1ch) 200%;
-  -webkit-background-clip:padding-box,text;
-  background-clip:padding-box,text;
-  background-repeat:no-repeat;
-  animation: 
-    b .7s infinite steps(1),   
-    t calc(var(--n)*0.04s) steps(var(--n)) forwards; /*0.04*/
-}
-@keyframes t{
-  from {background-size:0 200%}
-}
-@keyframes b{
-  50% {background-position:0 -100%,0 0}
-}
 
 /* Scroll Arrow for title page */
 #scroll_arrow {
   animation: fadeIn 2s;
-  animation-delay: 10s;
+  animation-delay: 8.52s;
   opacity: 0;
   animation-fill-mode: forwards;
   

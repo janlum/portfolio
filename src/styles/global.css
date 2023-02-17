@@ -3,6 +3,7 @@ html {
     font-family: sans-serif;
     overflow-y: scroll;    /* Gives ability to scroll */
     scroll-behavior: smooth;
+    color: rgb(255, 255, 255);
   }
 
  
@@ -131,6 +132,7 @@ animation:
 }
 @-webkit-keyframes blink{
   50% {-webkit-background-position:0 -100%,0 0}
+  to {background-position: 0 0%, 0 0}
 }
 @keyframes typing{
   /* from {background-size:0 200%} */
@@ -138,6 +140,7 @@ animation:
 }
 @keyframes blink{
   50% {background-position:0 -100%,0 0}
+  to {background-position: 0 0%, 0 0}
 }
 
 

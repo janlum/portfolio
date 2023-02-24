@@ -25,6 +25,7 @@ body {
   --delay-6: 5.04s;
   --delay-7: 6.64s;
   --delay-8: 7.56s;  
+  --nav-color: #002950;
 }
   
 * {
@@ -235,7 +236,7 @@ animation:
   width: 40px;
   height: 5px;
   margin-bottom: 10px;
-  background-color: #ff9776;
+  background-color: #004aad;
 }
 
 .nav-links {
@@ -249,13 +250,15 @@ animation:
 .nav-links a {
   display: block;
   text-align: center;
-  /* padding: 10px 0; */
+  padding: 10px 0;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
-  color:rgb(25, 25, 25);
+  color: white;
+  /* background-color: #004aad; */
+  background-color: var(--nav-color);
 }
 
 .nav-links a:hover, a:focus {
@@ -274,7 +277,8 @@ animation:
 @media screen and (min-width: 767px) {
   .nav-links {
     display: block;
-    background-color: #004aad;
+    /* background-color: #004aad; */
+    background-color: var(--nav-color);
     max-width: none;
     /* position: relative; */
     left: 0px;

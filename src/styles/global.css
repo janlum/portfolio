@@ -51,17 +51,8 @@ section {
 }
 
 /* Attempt at Hardcoding typewriter effect */
-#CoverPage h1 {
-  color: rgba(255, 255, 255, 0.75);
-  font-family: "Space Mono", monospace;
-  /* font-weight: bold; */
-  font-size: var(--fs-TitlePage); 
-  border-right: 2px solid;
-}
-
 
 .typewriter, .line_1, .line_2, .line_3, .line_4, .line_5, .line_6, .line_7, .line_8{
- /* color: rgba(255, 255, 255, 0.75); */
  font-family: "Space Mono", monospace;
  font-weight: bold;
  font-size: var(--fs-TitlePage);
@@ -69,20 +60,12 @@ section {
   background:
     linear-gradient(-90deg,rgba(255, 255, 255, 0.75) 5px,#0000 0) 10px 0,
     linear-gradient(rgba(255, 255, 255, 0.75) 0 0) 0 0;
-  /* background-color: linear-gradient(-90deg,rgba(255, 255, 255, 0.75) 5px,#0000 0) 10px 0; */
-  /* background-image: linear-gradient(rgba(255, 255, 255, 0.75) 0 0) 0 0;; */
   /* background-size:calc(var(--n)*1ch) 200%; */
   background-size: 0 200%;
   -webkit-background-clip:padding-box,text;
   background-clip:padding-box,text;
   overflow: hidden;
   background-repeat:no-repeat;
-  /* -webkit-animation:  
-    blink .7s infinite steps(1),   
-    typing calc(var(--n)*0.04s) steps(var(--n)) forwards;
-  animation: 
-    blink .7s infinite steps(1),   
-    typing calc(var(--n)*0.04s) steps(var(--n)) forwards;  */
 }
 .line_1 {
 animation: 
@@ -137,7 +120,6 @@ animation:
 } */
 @keyframes typing{
   to {background-size: calc(var(--n)*1ch) 200%;}
-  /* from {background-size: 0 200%;} */
 }
 @keyframes blink{
   50% {background-position:0 -100%,0 0}
@@ -258,9 +240,8 @@ animation:
 
 .nav-links {
   width: 100%;
-  top: 5rem;
+  /* top: 5rem; */
   left: 48px;
-  background-color: #ff9776;
   display: none;
   margin: 0;
 }
@@ -268,43 +249,52 @@ animation:
 .nav-links a {
   display: block;
   text-align: center;
-  padding: 10px 0;
+  /* padding: 10px 0; */
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
+  color:rgb(25, 25, 25);
 }
 
 .nav-links a:hover, a:focus {
-  background-color: #ff9776;
+  color: #38b6ff;
 }
 
 .expanded {
   display: unset;
 }
 
-/* .dark body {
-  background-color: #0d0950;
-  color: #fff;
-}
 
-.dark .nav-links a {
-  color: #000;
-} */
-
-
-@media screen and (min-width: 636px) {
+@media screen and (min-width: 767px) {
   .nav-links {
-    margin-left: 5em;
+    /* margin-left: 5em; */
     display: block;
-    position: static;
-    width: auto;
-    background: none;
+    background-color: #004aad;
+    max-width: none;
+    /* position: relative; */
+    left: 0px;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    height: 80px;
+    /* float: right;    */
+    /* overflow: hidden; */
+    margin-top: -1em;
   }
 
   .nav-links a {
     display: inline-block;
-    padding: 15px 20px;
+    padding: 25px 20px;
+    /* float: right; */
+  }
+
+  #nav_right {
+    float: right;
+  }
+
+  #home {
+    display: none;
   }
 
   .hamburger {

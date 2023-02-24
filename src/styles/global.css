@@ -25,7 +25,8 @@ body {
   --delay-6: 5.04s;
   --delay-7: 6.64s;
   --delay-8: 7.56s;  
-  --nav-color: #002950;
+  /* --nav-color: #002950; */
+  --nav-color: #004aad;
 }
   
 * {

@@ -262,6 +262,10 @@ animation:
   color: #38b6ff;
 }
 
+#logo {
+  display: none;
+}
+
 .expanded {
   display: unset;
 }
@@ -269,7 +273,6 @@ animation:
 
 @media screen and (min-width: 767px) {
   .nav-links {
-    /* margin-left: 5em; */
     display: block;
     background-color: #004aad;
     max-width: none;
@@ -278,23 +281,36 @@ animation:
     width: 100vw;
     margin-left: calc(50% - 50vw);
     height: 80px;
-    /* float: right;    */
-    /* overflow: hidden; */
     margin-top: -1em;
+
   }
 
   .nav-links a {
     display: inline-block;
     padding: 25px 20px;
-    /* float: right; */
   }
 
   #nav_right {
     float: right;
+    margin-right: 40px;
   }
 
   #home {
     display: none;
+  }
+
+  #logo {
+    display: inline-block;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: none;
+    border-color: white;
+    border-style: solid;
+    color: white;
+    padding: 12.5px 22.5px;
+    margin-top: 12.5px;
+    margin-bottom: 12.5px;
+    margin-left: 80px;
+    border-width: 1px;
   }
 
   .hamburger {

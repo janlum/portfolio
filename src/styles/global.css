@@ -2,6 +2,7 @@ html {
     background-color: rgb(25, 25, 25);
     font-family: sans-serif;
     overflow-y: scroll;  
+    overflow-x: hidden;
     scroll-behavior: smooth;
     color: rgb(255, 255, 255);
   }
@@ -227,18 +228,18 @@ animation:
 
 
 /* nav styles */
-.hamburger {
+/* .hamburger {
   padding-right: 20px;
   cursor: pointer;
-}
+} */
 
-.hamburger .line {
+/* .hamburger .line {
   display: block;
   width: 40px;
   height: 5px;
   margin-bottom: 10px;
   background-color: #004aad;
-}
+} */
 
 .nav-links {
   width: 100%;

@@ -9,5 +9,5 @@ import preact from "@astrojs/preact";
 export default defineConfig({
   integrations: [preact()],
   site: 'https://janlum.github.io',
-  base: '/portfolio/src',
+  base: '/portfolio',
 });

@@ -278,6 +278,8 @@ animation:
     display: inline-block;
     font-family: 'Quicksand', sans-serif;
     text-transform: none;
+    font-size: 1.2rem;
+    font-weight: bold;
     border-color: white;
     border-style: solid;
     color: white;

@@ -2,6 +2,9 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "About me";
+
+const { slot_classes } = Astro.props;
+
 const identity = {
   firstName: "Sarah",
   country: "Canada",
@@ -62,27 +65,29 @@ const textCase = "uppercase";
     </div>
 </section>
 
-<div id="content">
+<div id="content" class="min-h-screen">
     <BaseLayout pageTitle={pageTitle}>
-        <h2>I am a penultimate year student studying a combined degree in Mechatronics Engineering (Space Design Major) and Science (Computer Science Major). I am fluent in C and Python</h2>
+        <div>
+            <h2>I am a penultimate year student studying a combined degree in Mechatronics Engineering (Space Design Major) and Science (Computer Science Major). I am fluent in C and Python</h2>
 
-        <p>Here are a few facts about me:</p>
-        <ul>
-        <li>My name is {identity.firstName}.</li>
-        <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-        {identity.hobbies.length >= 2 && 
-            <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-        } 
-        </ul>
-        <p>My skills are:</p>
-        <ul>
-        {skills.map((skill) => <li class="skill">{skill}</li>)}
-        </ul>
+            <p>Here are a few facts about me:</p>
+            <ul>
+            <li>My name is {identity.firstName}.</li>
+            <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+            {identity.hobbies.length >= 2 && 
+                <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+            } 
+            </ul>
+            <p>My skills are:</p>
+            <ul>
+            {skills.map((skill) => <li class="skill">{skill}</li>)}
+            </ul>
 
-        {happy && <p>I am happy to be learning Astro!</p>}
+            {happy && <p>I am happy to be learning Astro!</p>}
 
-        {finished && <p>I finished this tutorial!</p>}
+            {finished && <p>I finished this tutorial!</p>}
 
-        {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+            {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+        </div>
 </BaseLayout>
 </div>

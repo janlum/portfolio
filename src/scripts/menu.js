@@ -4,7 +4,7 @@
 
 const initApp = () => {
   document.removeEventListener('DOMContentLoaded', initApp)
-  const hamburgerBtn = document.getElementById('hamburger');
+  const hamburgerBtn = document.getElementById('hamburger_icon');
   const mobileMenu = document.getElementById('mobile-menu');
 
   const toggleMenu = () => {

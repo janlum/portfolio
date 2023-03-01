@@ -323,24 +323,14 @@ animation:
   }
 
   #logo {
-    /* display: inline-block;
-    font-family: 'Quicksand', sans-serif; */
-    /* text-transform: none; */
-    /* border-color: white; */
-    /* border-style: solid; */
-    /* color: white; */
-    /* padding: 12.5px 22.5px; */
-    /* margin-top: 12.5px; */
-    /* margin-bottom: 12.5px; */
     margin-left: 80px;
-    /* border-width: 1px; */
   }
 
   .hidden-pc {
     display: none;
   }
 
-  .hamburger {
+  #hamburger {
     display: none;
   }
 
@@ -356,8 +346,7 @@ animation:
   }
 }
 
-@tailwind base;
-@tailwind components;
+
 @tailwind utilities;
 
 @layer utilities {

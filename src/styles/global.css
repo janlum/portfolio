@@ -26,8 +26,6 @@ body {
   --delay-6: 5.04s;
   --delay-7: 6.64s;
   --delay-8: 7.56s;  
-  /* --nav-color: #002950; */
-  /* --nav-color: #004aad; */
   --nav-color: #0046a4;
 }
   
@@ -40,14 +38,6 @@ h1 {
   font-size: 2.5rem;
 }
 
-/* section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  place-items: center;
-  align-content: center;
-} */
 
 /* Cover Page */
 #CoverPage {
@@ -117,16 +107,7 @@ animation:
     blink .8s steps(1) var(--delay-4) 1 forwards,   
     typing 0.8s steps(var(--n)) var(--delay-8) forwards;  
 }
-/* @-webkit-keyframes typing {
-  to {-webkit-background-size: calc(var(--n)*1ch) 200%}
 
-}
-@-webkit-keyframes blink{
-  50% {-webkit-background-position:0 -100%,0 0}
- 80% {
-   -webkit-background-position: 0 -200%, 00
- }
-} */
 @keyframes typing{
   to {background-size: calc(var(--n)*1ch) 200%;}
 }
@@ -188,7 +169,6 @@ animation:
 }
 #scroll_arrow a {
   position: absolute;
-  /* bottom: 20px; */
   padding-top: 70px;
   /* left: 50%; */
   z-index: 2;
@@ -233,22 +213,8 @@ animation:
 
 
 /* nav styles */
-/* .hamburger {
-  padding-right: 20px;
-  cursor: pointer;
-} */
-
-/* .hamburger .line {
-  display: block;
-  width: 40px;
-  height: 5px;
-  margin-bottom: 10px;
-  background-color: #004aad;
-} */
-
 .nav-links {
   width: 100%;
-  /* top: 5rem; */
   left: 48px;
   display: none;
   margin: 0;
@@ -264,7 +230,6 @@ animation:
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
   color: white;
-  /* background-color: #004aad; */
   background-color: var(--nav-color);
 }
 
@@ -273,7 +238,6 @@ animation:
 }
 
 #logo {
-  /* display: none; */
     display: inline-block;
     font-family: 'Quicksand', sans-serif;
     text-transform: none;
@@ -296,10 +260,8 @@ animation:
 @media screen and (min-width: 767px) {
   .nav-links {
     display: block;
-    /* background-color: #004aad; */
     background-color: var(--nav-color);
     max-width: none;
-    /* position: relative; */
     left: 0px;
     width: 100vw;
     margin-left: calc(50% - 50vw);
@@ -336,6 +298,14 @@ animation:
 
   #scroll_arrow span {
     left: 50%;
+  }
+
+  #footer {
+    display: block;
+    max-width: none;
+    left: 0px;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
   }
 
 }

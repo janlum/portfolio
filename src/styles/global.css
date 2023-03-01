@@ -159,7 +159,6 @@ animation:
   animation-delay: 8.52s;
   opacity: 0;
   animation-fill-mode: forwards;
-  
 }
 @keyframes fadeIn {
   0% {
@@ -172,7 +171,7 @@ animation:
 
 #scroll_arrow a span {
   position: absolute;
-  left: 50%;
+  /* left: 50%; */
   width: 24px;
   height: 24px;
   margin-left: -12px;
@@ -191,7 +190,7 @@ animation:
   position: absolute;
   /* bottom: 20px; */
   padding-top: 70px;
-  left: 50%;
+  /* left: 50%; */
   z-index: 2;
   display: inline-block;
   -webkit-transform: translate(0, -50%); 
@@ -345,11 +344,14 @@ animation:
     display: none;
   }
 
+  #scroll_arrow span {
+    left: 50%;
+  }
+
 }
 
-/* Hiding scroll arrow on title page on mobile devices */
-/* @media screen and (max-width: 767px) {
-  #scroll_arrow {
+@media screen and (max-width: 767px) {
+  #scroll_arrow p {
     display: none;
   }
-} */
+}

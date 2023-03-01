@@ -317,6 +317,7 @@ animation:
 }
 
 
+@tailwind components;
 @tailwind utilities;
 
 @layer utilities {

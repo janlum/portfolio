@@ -13,7 +13,6 @@ const initApp = () => {
     hamburgerBtn.classList.toggle('toggle-btn')
   }
 
-  console.log("DOMContentLoaded")
   hamburgerBtn.addEventListener('click', toggleMenu);
   mobileMenu.addEventListener('click', toggleMenu);
 }

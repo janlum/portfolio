@@ -10,7 +10,7 @@ const initApp = () => {
   const toggleMenu = () => {
     mobileMenu.classList.toggle('hidden')
     mobileMenu.classList.toggle('flex')
-    console.log(mobileMenu.classList)
+    hamburgerBtn.classList.toggle('toggle-btn')
   }
 
   console.log("DOMContentLoaded")

@@ -26,7 +26,7 @@ body {
   --delay-6: 5.04s;
   --delay-7: 6.64s;
   --delay-8: 7.56s;  
-  --nav-color: #0046a4;
+  --nav-color: #002d69;
 }
   
 * {
@@ -38,14 +38,16 @@ h1 {
   /* font-size: 2.5rem; */
   font-size: clamp(2.5rem, 5vw + 0.2rem, 4rem);
   --tw-text-opacity: 1;
-  color: rgb(20 184 166 / var(--tw-text-opacity));
-  font-family: 'Playfair Display', serif;
+  color: white;
+  font-family: 'Noto Serif', serif;
   font-weight: bold;
 }
 
 .p_content {
   font-size: clamp(1rem, 4vw, 1.3rem);
   margin: 1vh 1vh;
+  font-family: 'Open Sans', serif;
+  font-weight: bold;
 }
 
 /* Cover Page */
@@ -235,9 +237,10 @@ animation:
   padding: 10px 0;
   text-decoration: none;
   font-size: 1.2rem;
-  /* font-weight: bold; */
-  font-family: 'Playfair Display', sans-serif;
-  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  /* text-transform: uppercase; */
   color: white;
   background-color: var(--nav-color);
 }
@@ -247,7 +250,8 @@ animation:
 }
 
 .mobile_nav_link {
-  font-family: 'Playfair Display', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
 }
 
 #logo {

@@ -256,6 +256,13 @@ animation:
   display: unset;
 }
 
+#footer {
+  display: block;
+  max-width: none;
+  left: 0px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
 
 @media screen and (min-width: 767px) {
   .nav-links {
@@ -300,13 +307,7 @@ animation:
     left: 50%;
   }
 
-  #footer {
-    display: block;
-    max-width: none;
-    left: 0px;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-  }
+
 
 }
 

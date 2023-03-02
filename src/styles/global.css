@@ -35,9 +35,17 @@ body {
   
 h1 {
   margin: 1rem 0;
-  font-size: 2.5rem;
+  /* font-size: 2.5rem; */
+  font-size: clamp(2.5rem, 5vw + 0.2rem, 4rem);
+  --tw-text-opacity: 1;
+  color: rgb(20 184 166 / var(--tw-text-opacity));
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
 }
 
+.p_content {
+  font-size: clamp(1rem, 4vw, 1.3rem);
+}
 
 /* Cover Page */
 #CoverPage {
@@ -226,8 +234,8 @@ animation:
   padding: 10px 0;
   text-decoration: none;
   font-size: 1.2rem;
-  font-weight: bold;
-  font-family: 'Open Sans', sans-serif;
+  /* font-weight: bold; */
+  font-family: 'Playfair Display', sans-serif;
   text-transform: uppercase;
   color: white;
   background-color: var(--nav-color);
@@ -235,6 +243,10 @@ animation:
 
 .nav-links a:hover, a:focus, a:active {
   color: #38b6ff;
+}
+
+.mobile_nav_link {
+  font-family: 'Playfair Display', sans-serif;
 }
 
 #logo {

@@ -1,29 +1,31 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 
 const pageTitle = "About me";
 
-const { slot_classes } = Astro.props;
+// const { slot_classes } = Astro.props;
 
-const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
-};
+// const identity = {
+//   firstName: "Sarah",
+//   country: "Canada",
+//   occupation: "Technical Writer",
+//   hobbies: ["photography", "birdwatching", "baseball"],
+// };
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+// const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 
-const happy = true;
-const finished = false;
-const goal = 3;
+// const happy = true;
+// const finished = false;
+// const goal = 3;
 
-const skillColor = "navy";
-const fontWeight = "bold";
-const textCase = "uppercase";
+// const skillColor = "navy";
+// const fontWeight = "bold";
+// const textCase = "uppercase";
 ---
 
-<style define:vars={{skillColor, fontWeight, textCase}}>
+<!-- <style define:vars={{skillColor, fontWeight, textCase}}>
     h1 {
         color: purple;
         font-size: 4rem;
@@ -33,7 +35,7 @@ const textCase = "uppercase";
         font-weight: var(--fontWeight);
         text-transform: var(--textCase);
     }
-</style>
+</style> -->
 
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,32 +45,38 @@ const textCase = "uppercase";
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 
-<section id="CoverPage">
-    <div id="title_text" >
-        <!-- <span class="typewriter" style="--n:234">Hi.<span class="br"></span>
-            I'm Jan.<span class="br"></span>
-            A penultimate year Engineering / Computer Science student at the University of Sydney.<span class="br"></span>
-            And I'm passionate about Cybersecurity.
-        </span> -->
+<body>
+    <section id="CoverPage">
+        <div id="title_text" >
 
-        <span class="line_1" style="--n:4">Hi.</span><span class="br"></span>
-        <span class="line_2" style="--n:9">I'm Jan.</span><span class="br"></span>
-        <span class="line_3" style="--n:20">A penultimate year</span><span class="br"></span>
-        <span class="line_4" style="--n:24">Engineering / Computer</span><span class="br"></span>
-        <span class="line_5" style="--n:24">Science student at the</span><span class="br"></span>
-        <span class="line_6" style="--n:23">University of Sydney.</span><span class="br"></span>
-        <span class="line_7" style="--n:26">And I'm passionate about</span><span class="br"></span>
-        <span class="line_8" style="--n:15">Cybersecurity.</span>
- </div>
-    <div id="scroll_arrow" class="demo">
-        <a href="#content"><span></span><p>Scroll</p></a>
+            <span class="line_1" style="--n:4">Hi.</span><span class="br"></span>
+            <span class="line_2" style="--n:9">I'm Jan.</span><span class="br"></span>
+            <span class="line_3" style="--n:20">A penultimate year</span><span class="br"></span>
+            <span class="line_4" style="--n:24">Engineering / Computer</span><span class="br"></span>
+            <span class="line_5" style="--n:24">Science student at the</span><span class="br"></span>
+            <span class="line_6" style="--n:23">University of Sydney.</span><span class="br"></span>
+            <span class="line_7" style="--n:26">And I'm passionate about</span><span class="br"></span>
+            <span class="line_8" style="--n:15">Cybersecurity.</span>
     </div>
-</section>
+        <div id="scroll_arrow" class="demo">
+            <a href="#content"><span></span><p>Scroll</p></a>
+        </div>
+    </section>
 
-<div id="content">
-    <BaseLayout pageTitle={pageTitle}>
-        <div>
-            <h2>I am a penultimate year student studying a combined degree in Mechatronics Engineering (Space Design Major) and Science (Computer Science Major). I am fluent in C and Python</h2>
+    <div id="content" class="min-h-screen flex flex-col">
+        <Header />
+        <!-- <BaseLayout pageTitle={pageTitle}> -->
+            <h1 class="">About Me</h1>
+            <p>
+                I'm a Computer Science student based in Sydney, Australia. I'm passionate about Cybersecurity and am currently working my way towards a certificate. 
+            </p>
+            <p>
+                Organised, independent person with good critical thinking skills. Enjoys solving challenges from Capture-The-Flag (CTF) tournaments and reading writeups to learn how other people solved a challenge differently. Loves reading and watching movies. 
+            </p>
+            <p>
+                Passionate about Computer Science as a whole and loves learning about how programs and machines function.
+            </p>
+            <!-- <h2>I am a penultimate year student studying a combined degree in Mechatronics Engineering (Space Design Major) and Science (Computer Science Major). I am fluent in C and Python</h2>
 
             <p>Here are a few facts about me:</p>
             <ul>
@@ -87,7 +95,11 @@ const textCase = "uppercase";
 
             {finished && <p>I finished this tutorial!</p>}
 
-            {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-        </div>
-</BaseLayout>
-</div>
+            {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>} -->
+        <!-- </BaseLayout> -->
+        <Footer />
+        <script>
+            import "../scripts/menu.js";
+        </script>
+    </div>
+</body>

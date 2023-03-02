@@ -45,6 +45,7 @@ h1 {
 
 .p_content {
   font-size: clamp(1rem, 4vw, 1.3rem);
+  margin: 1vh 1vh;
 }
 
 /* Cover Page */

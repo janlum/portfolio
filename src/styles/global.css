@@ -281,7 +281,7 @@ animation:
   margin-left: calc(50% - 50vw);
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .nav-links {
     display: block;
     background-color: var(--nav-color);
@@ -328,7 +328,7 @@ animation:
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   #scroll_arrow p {
     display: none;
   }

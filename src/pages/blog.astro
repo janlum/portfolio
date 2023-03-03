@@ -5,11 +5,12 @@ import BlogPost from '../components/BlogPost.astro';
 
 const allPosts = await Astro.glob('../pages/posts/*.md');
 
-const pageTitle = "My Cybersecurity Blog";
+const pageTitle = "Jan's Blog";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-        <h2>Here, I will write about my CTF and Cybersecurity journey while posting some writeups for the CTF challenges I have solved.</h2>
+        <!-- <h2 class="text-2xl font-bold">{pageTitle}</h2> -->
+        <h2 class="text-xl">A non-exhaustive list of writeups for some CTF challenges which I have solved:</h2>
         <ul>
             {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
         </ul>

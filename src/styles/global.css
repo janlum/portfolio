@@ -276,11 +276,6 @@ animation:
   display: unset;
 }
 
-/* #about_picture {
-  height: calc(100vh - 160px);
-  width: auto;
-
-} */
 
 #footer {
   display: block;
@@ -379,6 +374,10 @@ animation:
 
   #row .right .content {
     padding-bottom: 2rem;
+  }
+
+  .about-picture {
+    margin-top: 2.5rem;
   }
 }
 

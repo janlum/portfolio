@@ -2,8 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { Image, Picture } from '@astrojs/image/components';
-import aboutImage from './src/assets/about.jpg';
+// import aboutImage from './src/assets/about.jpg';
 
 const pageTitle = "About me";
 
@@ -41,11 +40,11 @@ const pageTitle = "About me";
         <Header />
         <!-- <BaseLayout pageTitle={pageTitle}> -->
 
-            <div class="max-w-screen-xl">
+            <div class="max-w-screen-xl max-h-[100vh-200px]">
                 <!-- <div class="aspect-w-2 aspect-h-2   my-5  md:mr-3 md:float-left md:w-auto md:h-auto"> -->
                     <img src="/images/mountain.jpg" alt="image of a computer"  class="max-h-[80vh] max-w-screen my-5 w-screen px-auto mx-auto md:float-left md:max-w-[40vw] md:max-h-[80vh] md:w-auto md:mr-3 md:-ml-[1rem] md:my-0">
                 <!-- </div> -->
-            <div class="mx-[1rem] my-auto h-[100vh-80px] justify-center grid grid-col-1 content_page_text">
+            <div class="mx-[1rem] my-auto h-[100vh-80px] max-h-[100vh-200px] justify-center grid grid-col-1 content_page_text">
                     <h1 class="text-center">About Me</h1>
                     <p class="p_content">
                         I'm a Computer Science student based in Sydney, Australia. I'm passionate about Cybersecurity and am currently working my way towards a certificate. 

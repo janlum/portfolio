@@ -46,7 +46,7 @@ h1 {
 }
 
 .p_content {
-  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
   margin: 1vh 1vh;
   font-family: 'Open Sans', serif;
   font-weight: bold;
@@ -361,12 +361,25 @@ animation:
   }
 }
 
+@media screen and (max-width: 1024px) {
+  #row .right .content {
+    padding-left: 0;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #scroll_arrow p {
     display: none;
   }
 
+  #row {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
 
+  #row .right .content {
+    padding-bottom: 2rem;
+  }
 }
 
 

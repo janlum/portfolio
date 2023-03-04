@@ -12,12 +12,12 @@ const {pageTitle} = Astro.props;
 	</head>
 	<body class="flex flex-col min-h-screen">
 		<Header />
-		<div class="w-full grid place-items-center mb-[2rem]">
-			<div class="max-w-[80ch] ">
-				<h1 class="normal-case">{pageTitle}</h1>
+		<!-- <div class="w-full grid place-items-center mb-[2rem]">
+			<div class="max-w-[80ch] flex flex-col items-center md:items-start min-w-min"> -->
+				
 				<slot />
-			</div>
-		</div>
+			<!-- </div>
+		</div> -->
 		<Footer />
 		<script>
 			import "../scripts/menu.js";

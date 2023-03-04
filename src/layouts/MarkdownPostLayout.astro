@@ -3,28 +3,51 @@ import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.pageTitle}>
-    <h2 class="text-5xl my-4 font-bold"> {frontmatter.title}</h2>
-    <p class="text-lg my-4"><em>{frontmatter.description}</em></p>
-    <p class="my-4">Written by: {frontmatter.author}</p>
-    <img src={frontmatter.image.url} width="250" alt={frontmatter.image.alt} />
-    
-    <div class="my-6">
-      <article class="prose
+  <!-- <div class="grid place-items-center  mx-5 md:text-left"> -->
+    <div class="w-full  mb-[2rem]">
+			<div class="max-w-2xl mx-auto flex flex-col items-center md:items-start">
+        <h2 class="text-3xl my-4 font-bold"> {frontmatter.title}</h2>
+        <p class="text-lg mb-2"><em>{frontmatter.description}</em></p>
+        <p class="mb-4">Written by: {frontmatter.author}</p>
+        <img src={frontmatter.image.url} width="250" alt={frontmatter.image.alt} />
+      </div>
+    </div>
+    <!-- <div class="my-6 grid place-items-center content-center"> -->
+    <!-- <div class="w-full grid place-items-center mb-[2rem]"> -->
+      <div class="prose
+         max-w-2xl
+        grid w-full
+        mx-auto
+        prose-md
+        text-center
+        md:text-left
+        my-8
+
       prose-p:text-gray-50
+        prose-p:overflow-hidden
+
       prose-headings:text-white
         prose-h2:text-4xl
         prose-h3:text-2xl
-      prose-strong:text-white
-        prose-strong:italic
+
       prose-li:marker:text-white
       prose-li:text-white
-      prose-code:text-green-500
+
       prose-a:text-blue-400
-        hover:prose-a:text-blue-600
+      hover:prose-a:text-blue-600
+
+      prose-strong:text-white
+        prose-strong:italic
+
+      prose-code:text-green-500
+
+        prose-hr:w-[100%]
       ">
         <slot />
-      </article>
     </div>
+      
+    <!-- </div> -->
+
 </BaseLayout>
 <style>
   a {

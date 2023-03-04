@@ -71,7 +71,7 @@ I then get a clue to look in the apache access file, which a quick google search
 The next clue tells us to look for a file which stores information on a mac. Google then informs us that it's called a `.DS_Store` file. Looking in that file, I get the final part of the flag: `_a69684fd}`.
 
 ### Flag
-**picoCTF{t -→h4ts_4_l0t_0f_pl4c3s_2_lO0k_a69684fd}**
+**picoCTF{th4ts_4_l0t_0f_pl4c3s_2_lO0k_a69684fd}**
 
 ---
 

@@ -10,7 +10,7 @@ const pageTitle = "Jan's Blog";
 
 <BaseLayout pageTitle={pageTitle}>
         <!-- <h2 class="text-2xl font-bold">{pageTitle}</h2> -->
-        <h2 class="text-xl">A non-exhaustive list of writeups for some CTF challenges which I have solved:</h2>
+        <h2 class="text-xl">A non-exhaustive list of writeups for some CTF challenges and vulnerable machines which I have solved:</h2>
         <span class="br"></span>
         <ul class="list-disc">
             {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}

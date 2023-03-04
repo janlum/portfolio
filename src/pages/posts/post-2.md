@@ -9,8 +9,8 @@ image:
 ---
 
 ## Quotient
-### Category: Windows, Privilege Escalation
-### Vulnerability: Unquoted Service Path
+#### Category: Windows, Privilege Escalation
+#### Vulnerability: Unquoted Service Path
 
 We are provided credentials for the user "Sage" to access a remote machine. We were told to use Remote Desktop Protocol (RDP) to connect to the remote machine. I used `xfreerdp` and the following command to accomplish this: 
 
@@ -18,7 +18,7 @@ We are provided credentials for the user "Sage" to access a remote machine. We w
 xfreerdp /u:sage /p:'[password]' /v:[machine ip]
 ```
 
-**Enumeration**
+### Enumeration
 
 Using the command `systeminfo`, we can obtain information about the system. 
 
@@ -63,7 +63,7 @@ icacls "C:\Program Files\Development Files"
 
 From the results, we can see that we do have write access to the "Development Files" folder. Now, we can proceed with our exploitation.
 
-**Exploitation**
+### Exploitation
 
 We will use `msfvenom` to create a reverse shell executable on our local machine using the following command:
 
@@ -93,14 +93,15 @@ icacls "c:\program files\development files\Devservice.exe" \grant everyone:F
 
 Now, we restart the target machine to get windows to auto-run the reverse shell script on boot. When the machine is rebooted, I obtained a reverse shell on my local machine with SYSTEM privileges and was able to obtain the flag from administrator desktop.
 
-**Flag: THM{USPE_SUCCESS}**
+### Flag
+**THM{USPE_SUCCESS}**
 
 ---
 
 ## Agent T
-### Category: WebApp, Privilege Escalation
+#### Category: WebApp, Privilege Escalation
 
-**Enumeration**
+### Enumeration
 
 When accessing the provided website with a web browser, I notice that there's nothing special in teh actual html elements. However, when I inspect the HTTP request and response headers, I note that the PHP version was leaked - PHP 8.1.0. 
 
@@ -108,4 +109,5 @@ Googling vulnerabilaties for that version of PHP, I found a vulnerability and sc
 
 Downloading the python script and running it, I managed to obtain a root shell into the server and obtained the flag in the root directory.
 
-**Flag: flag{4127d0530abf16d6d23973e3df8dbecb}**
+### Flag
+**8flag{4127d0530abf16d6d23973e3df8dbecb}**

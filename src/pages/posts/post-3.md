@@ -10,16 +10,17 @@ image:
 ---
 
 ## Musical five minutes
-### Category: Steganography
+#### Category: Steganography
 
 We were provided an audio file. Downloading the file and playing it in a media player, we could see that the flag was on the image track.
 
-**Flag: ugra_we_support_local_artists_0824da**
+### Flag
+**ugra_we_support_local_artists_0824da**
 
 ---
 
 ## Whirlpool
-### Category: Cryptography
+#### Category: Cryptography
 
 A text file encrypted using a ROT13 cypher was provided to us. I used the following bash script to decode the text to obtain the flag:
 
@@ -27,23 +28,25 @@ A text file encrypted using a ROT13 cypher was provided to us. I used the follow
 cat ciphertext.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m' | awk '/ugra/{print $13}'
 ```
 
-**Flag: ugra_double_security_for_only_50_more_bucks_j8ejd7miwsmf**
+### Flag
+**ugra_double_security_for_only_50_more_bucks_j8ejd7miwsmf**
 
 ---
 
 ## Cartoons
-### Category: Miscellaneous
+#### Category: Miscellaneous
 
 We are given a text file which contains many long lines of unicode. When I use `cat` to display the file, a series of characters would flash across the terminal very quickly. 
 
 I used a screen recorder to record the flashing characters and watched the playback. Turns out, the flashing characters form the flag.
 
-**Flag: ugra_weve_got_terminals_8e3bz50ts45q**
+### Flag
+**ugra_weve_got_terminals_8e3bz50ts45q**
 
 ---
 
 ## Safestr
-### Category: PWN
+#### Category: PWN
 
 We are supposed to use `nc` to connect to a remote host which is running program. We are provided the source code to the program which is written in C.
 
@@ -114,4 +117,5 @@ I used `perl` to produce the input string.
 $ perl -e 'print "A" x256'
 ```
 
-**Flag: ugra_safe_0r_no7_5afe_2fgmfjkzlblq**
+### Flag
+**ugra_safe_0r_no7_5afe_2fgmfjkzlblq**

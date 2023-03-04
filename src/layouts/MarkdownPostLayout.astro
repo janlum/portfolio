@@ -12,12 +12,13 @@ const { frontmatter } = Astro.props;
     <div class="my-2">
       <article class="prose
       prose-p:text-gray-50
-        prose-headings:text-white
-        prose-strong:text-white
-          prose-li:marker:text-white
-          prose-li:text-white
-        prose-code:text-green-500
-        
+      prose-headings:text-white
+      prose-strong:text-white
+      prose-li:marker:text-white
+      prose-li:text-white
+      prose-code:text-green-500
+      prose-a:text-blue-400
+        hover:prose-a:text-blue-600
       ">
         <slot />
       </article>
@@ -28,18 +29,4 @@ const { frontmatter } = Astro.props;
     color: #00539F;
   }
         
-  /* .tags {
-    display: flex; 
-    flex-wrap: wrap; 
-    margin: 0 auto;  
-  }
-
-  .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: .5em;
-    padding: .5em 1em;
-    font-size: 1.15em;
-    background-color: #F8FCFD;
-  } */
 </style>

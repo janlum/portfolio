@@ -51,6 +51,7 @@ h1 {
   font-family: 'Open Sans', serif;
   font-weight: bold;
   text-align: center;
+  line-heigth: 0.8;
 }
 
 /* Cover Page */
@@ -285,10 +286,10 @@ animation:
   margin-left: calc(50% - 50vw);
 }
 
-.content_page_text {
+/* .content_page_text {
   padding-top: 1rem;
   padding-bottom: 2rem;
-}
+} */
 
 
 @media screen and (min-width: 768px) {
@@ -334,27 +335,9 @@ animation:
     left: 50%;
   }
 
-  .content_page_text {
-    /* md:pl-[clamp(5%, 1%, 10%)] md:pt-[clamp(5%, 5vh ,20%)] 
-    */
-    padding-left: 10%;
-    padding-top: 4%;
-  }
 
 }
 
-@media screen and (min-width: 1024px) {
-  .content_page_text {
-    padding-left: clamp(5%, 8vw, 10%);
-    padding-top: clamp(5%, 8vh, 15%);
-  }
-}
-
-@media screen and (min-height: 1024px) {
-  .content_page_text {
-    padding-top: clamp(5%, 8vh, 15%);
-  }
-}
 
 @media screen and (max-width: 1024px) {
   #row .right .content {
@@ -379,8 +362,12 @@ animation:
   .about-picture {
     margin-top: 2.5rem;
   }
-}
+  
+  .p_content{
+    margin: 2vh 1vh;
+  }
 
+}
 
 
 

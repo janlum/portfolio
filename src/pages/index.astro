@@ -2,21 +2,11 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-// import aboutImage from './src/assets/about.jpg';
 
 const pageTitle = "About me";
 
 ---
 
-
-
-<!-- <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-</head> -->
 
 <body>
     <section id="CoverPage" >
@@ -30,7 +20,7 @@ const pageTitle = "About me";
             <span class="line_6" style="--n:23">University of Sydney.</span><span class="br"></span>
             <span class="line_7" style="--n:26">And I'm passionate about</span><span class="br"></span>
             <span class="line_8" style="--n:15">Cybersecurity.</span>
-    </div>
+        </div>
         <div id="scroll_arrow" class="demo">
             <a href="#content"><span></span><p>Scroll</p></a>
         </div>
@@ -38,26 +28,6 @@ const pageTitle = "About me";
 
     <div id="content" class="min-h-screen flex flex-col">
         <Header />
-        <!-- <BaseLayout pageTitle={pageTitle}> -->
-
-            <!-- <div class="max-w-screen-xl max-h-[100vh-200px]">
-                    <img src="/images/mountain.jpg" alt="image of a computer"  class="max-h-[80vh] max-w-screen my-5 w-screen px-auto mx-auto md:float-left md:max-w-[40vw] md:max-h-[80vh] md:w-auto md:mr-3 md:-ml-[1rem] md:my-0">
-                <div class="mx-[1rem] my-auto h-[100vh-80px] max-h-[100vh-200px] justify-center grid grid-col-1 content_page_text">
-                    <h1 class="text-center">About Me</h1>
-                    <p class="p_content">
-                        I'm a Computer Science student based in Sydney, Australia. I'm passionate about Cybersecurity and am currently working my way towards a certificate. 
-                    </p>
-                    <p class="p_content">
-                        Organised, independent person with good critical thinking skills. Enjoys solving challenges from Capture-The-Flag (CTF) tournaments and reading writeups to learn how other people solved a challenge differently. Loves reading and watching movies. 
-                    </p>
-                    <p class="p_content">
-                        Passionate about Computer Science as a whole and loves learning about how programs and machines function.
-                    </p>
-                    <p class="p_content">
-                        Leave me an email to get in touch!
-                    </p>
-                </div>
-           </div> -->
            <div class="w-full min-h-[80vh] grid place-items-center">
                 <div id="row" class="max-w-screen-xl w-[80%] grid grid-cols-2 gap-14">
                     <div class="  md:my-6 md:mx-6">
@@ -82,7 +52,6 @@ const pageTitle = "About me";
                     </div>
                 </div>
            </div>
-        <!-- </BaseLayout> -->
         <Footer />
         <script>
             import "../scripts/menu.js";
